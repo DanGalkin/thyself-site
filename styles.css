@@ -1,4 +1,8 @@
 /* Reset and base styles */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,62 +18,230 @@ body {
     color: #e5e5e5;
 }
 
-/* Hero section - centered content */
-.hero {
-    flex: 1;
+/* Site header */
+.site-header {
+    padding: 1.25rem 2rem;
+    background: #0a0a0a;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.header-content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    text-align: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.hero-content {
-    max-width: 800px;
-    width: 100%;
-}
-
-.hero-line {
+.header-left {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    gap: 0.75rem;
 }
 
-.icon {
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-link {
+    color: #a3a3a3;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-link:hover {
     color: #e5e5e5;
-    width: 48px;
-    height: 48px;
+}
+
+.header-icon {
+    color: #e5e5e5;
+    width: 42px;
+    height: 42px;
     flex-shrink: 0;
 }
 
-h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.2;
+.header-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #e5e5e5;
 }
 
-.tagline {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
+/* Sections - shared */
+main {
+    flex: 1;
+}
+
+.section {
+    padding: 5rem 2rem;
+}
+
+.section-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Section 1: What We Do */
+.section-what-we-do {
+    text-align: center;
+}
+
+.section-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #c0c0c0;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+.section-subtext {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #a3a3a3;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-subtext strong {
+    color: #e5e5e5;
+}
+
+.section-subheading {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #a3a3a3;
+    margin-top: -0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Section 2: What is Cause */
+.section-cause {
+    background: #0f0f0f;
+}
+
+.cause-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.cause-image img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.cause-features {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #e5e5e5;
+}
+
+.feature p {
+    font-size: 1rem;
+    line-height: 1.6;
     color: #a3a3a3;
 }
 
-.app-link {
+.try-it {
+    text-align: center;
+}
+
+.try-it-heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.store-badge {
     display: inline-block;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
-.app-link:hover {
-    transform: translateY(-2px);
-}
-
-.cause-logo {
-    width: 64px;
+.store-badge img {
     height: 64px;
-    border-radius: 12px;
+    width: auto;
+}
+
+.store-badge:hover {
+    opacity: 0.8;
+}
+
+/* Section 3: Who Are We */
+.team-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.25rem;
+}
+
+.team-member h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.team-role {
+    font-size: 0.95rem;
+    color: #a3a3a3;
+    margin-bottom: 0.75rem;
+}
+
+.team-bio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #b0b0b0;
+    margin-bottom: 1rem;
+}
+
+.linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #a3a3a3;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+    color: #e5e5e5;
 }
 
 /* Footer */
@@ -82,7 +254,7 @@ h1 {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -93,54 +265,102 @@ h1 {
     color: #888888;
 }
 
+.footer-right {
+    text-align: right;
+}
+
+.footer-address {
+    margin-bottom: 0.25rem;
+}
+
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    color: #a3a3a3;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.footer-icon {
+    width: 30px;
+    height: 30px;
+    color: #a3a3a3;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
+    .section {
+        padding: 3.5rem 1.5rem;
     }
-    
-    .tagline {
-        font-size: 1.125rem;
+
+    .section-heading {
+        font-size: 1.8rem;
     }
-    
-    .cause-logo {
-        width: 56px;
-        height: 56px;
+
+    .section-text {
+        font-size: 1.1rem;
     }
-    
-    .icon {
-        width: 36px;
-        height: 36px;
+
+    .cause-columns {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
-    
-    .hero-line {
-        gap: 0.75rem;
+
+    .cause-image img {
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .team-columns {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .team-photo {
+        width: 120px;
+        height: 120px;
     }
 }
 
 @media (max-width: 480px) {
-    h1 {
+    .section {
+        padding: 2.5rem 1rem;
+    }
+
+    .section-heading {
         font-size: 1.5rem;
     }
-    
-    .tagline {
+
+    .section-text {
         font-size: 1rem;
     }
-    
-    .hero {
-        padding: 1rem;
+
+    .section-subtext {
+        font-size: 0.95rem;
     }
-    
+
+    .store-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .store-badge img {
+        height: 52px;
+    }
+
     .footer {
         padding: 1rem;
     }
-    
+
     .footer-content {
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
     }
-    
+
     .footer-left,
     .footer-right {
         font-size: 0.8rem;
